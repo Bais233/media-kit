@@ -74,8 +74,9 @@ if(LIBMPV_TARGET_PROCESSOR MATCHES "^(arm64|aarch64)$" OR LIBMPV_GENERATOR_PLATF
   set(LIBMPV "mpv-dev-aarch64-20260911-git-41f6a64.zip")
   set(LIBMPV_SHA256 "3f1dcaa0b8788f06bf14d1e0e9672c2e3b4e25a3d8c92eb1514349ba41ea040f")
 else()
-  set(LIBMPV "mpv-dev-x86_64-v3-20260911-git-41f6a64.7z")
-  set(LIBMPV_SHA256 "367d978571cdfcdcf9f4beac658782f09e42f3eacd31bcd050be3e1bb472d90f")
+  # Bais233 fork: use baseline x86_64 build (no AVX2/v3 requirement) for old CPUs
+  set(LIBMPV "mpv-dev-x86_64-20260911-git-41f6a64.7z")
+  set(LIBMPV_SHA256 "db522a249afdeda21162856f47c12880dd0ed8ae2eb12d0ae90f9ce55fe0e7d2")
 endif()
 
 # Download URL of the libmpv archive.
